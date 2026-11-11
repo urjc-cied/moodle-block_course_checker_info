@@ -104,6 +104,11 @@ class block_course_checker_info extends block_base {
             }
         }
 
+        if (!empty($data->in_progress)) {
+            // The course page asks for the progress and reloads itself when the checks finish.
+            $this->page->requires->js_call_amd('local_course_checker/progress', 'init', [$course->id]);
+        }
+
         // Render the Mustache template.
         $renderer = $this->page->get_renderer('block_course_checker_info');
         $this->content->text = $renderer->render_from_template('block_course_checker_info/block', $data);

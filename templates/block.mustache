@@ -33,11 +33,12 @@
         "failed":23
     }
 }}
-<span class="text-left">{{#str}}checker_last_run, local_course_checker, {{#timestamp}}{{timestamp}}{{/timestamp}}{{^timestamp}}{{#str}}checker_never_run, local_course_checker{{/str}}{{/timestamp}}{{/str}}</span>
+<span class="text-start">{{#str}}checker_last_run, local_course_checker, {{#timestamp}}{{timestamp}}{{/timestamp}}{{^timestamp}}{{#str}}checker_never_run, local_course_checker{{/str}}{{/timestamp}}{{/str}}</span>
 {{#in_progress}}
     <div class="progress" id="course-checker-progress-container">
         <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">{{#str}}check_course_in_progress, local_course_checker{{/str}}</div>
     </div>
+    <p class="small text-muted mt-1 mb-0" role="status" aria-live="polite" data-region="local_course_checker-progress">{{#str}}progress_queued, local_course_checker{{/str}}</p>
 {{/in_progress}}
 {{^in_progress}}
     <div class="progress" id="course-checker-progress-container">
