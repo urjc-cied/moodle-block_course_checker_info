@@ -27,11 +27,11 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2026090100;
+$plugin->version = 2026111100;
 $plugin->requires = 2025041400;
 $plugin->release = 'v5.0-r2';
 $plugin->component = 'block_course_checker_info';
 $plugin->maturity = MATURITY_STABLE;
 $plugin->dependencies = [
-    'local_course_checker' => 2026090100,
+    'local_course_checker' => 2026111100,
 ];
